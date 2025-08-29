@@ -16,7 +16,7 @@ ADMIN_ID = 1289957753  # سَلِيمٌ
 def home():
     return "AIIMS Guwahati Predictor Bot (PW Rank Booster) running ✅"
 
-@app.route(f"/{BOT_TOKEN}", methods=["POST"])
+@app.route("/webhook", methods=["POST"])
 def webhook():
     data = request.get_json()
     if "message" in data:
